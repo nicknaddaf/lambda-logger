@@ -1,0 +1,53 @@
+{
+	"name": "@nicknaddaf/lambda-logger",
+	"version": "0.1.0",
+	"description": "A comprehensive, highly configurable TypeScript logging library designed specifically for AWS serverless applications",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"publishConfig": {
+		"@nicknaddaf:registry": "https://npm.pkg.github.com/"
+	},
+	"scripts": {
+		"build": "tsc",
+		"test": "jest",
+		"lint": "eslint src/**/*.ts",
+		"lint:fix": "eslint src/**/*.ts --fix",
+		"prepublishOnly": "npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nicknaddaf/lambda-logger.git"
+	},
+	"keywords": [
+		"logging",
+		"logger",
+		"aws",
+		"lambda",
+		"serverless",
+		"cloudwatch",
+		"s3",
+		"typescript"
+	],
+	"author": "nicknaddaf",
+	"license": "MIT",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/nicknaddaf/lambda-logger/issues"
+	},
+	"homepage": "https://github.com/nicknaddaf/lambda-logger#readme",
+	"devDependencies": {
+		"@types/jest": "^30.0.0",
+		"@types/node": "^24.9.1",
+		"@typescript-eslint/eslint-plugin": "^8.46.2",
+		"@typescript-eslint/parser": "^8.46.2",
+		"eslint": "^9.38.0",
+		"jest": "^30.2.0",
+		"ts-jest": "^29.4.5",
+		"tsx": "^4.20.6",
+		"typescript": "^5.9.3"
+	},
+	"dependencies": {
+		"@aws-sdk/client-cloudwatch-logs": "^3.913.0",
+		"@aws-sdk/client-s3": "^3.913.0"
+	}
+}
