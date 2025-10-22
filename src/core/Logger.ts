@@ -148,7 +148,7 @@ export class Logger {
     }
 
     async flush(): Promise<void> {
-        const flushPromises = this.config.destinations.filter((d) => d.flush).map((d) => d.flush());
+        const flushPromises = this.config.destinations.filter((d) => d.flush).map((d) => d.flush!());
 
         await Promise.allSettled(flushPromises);
     }

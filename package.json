@@ -1,14 +1,15 @@
 {
     "name": "@nicknaddaf/lambda-logger",
-    "version": "0.2.3",
+    "version": "0.3.0",
     "description": "A comprehensive, highly configurable TypeScript logging library designed specifically for AWS serverless applications",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/types/index.d.ts",
     "exports": {
         ".": {
-            "require": "./dist/index.js",
-            "import": "./dist/index.js",
-            "types": "./dist/index.d.ts"
+            "require": "./dist/cjs/index.js",
+            "import": "./dist/esm/index.js",
+            "types": "./dist/types/index.d.ts"
         }
     },
     "files": [
@@ -17,7 +18,10 @@
         "LICENSE"
     ],
     "scripts": {
-        "build": "tsc",
+        "build": "npm run build:cjs && npm run build:esm && npm run build:types",
+        "build:cjs": "tsc -p tsconfig.cjs.json",
+        "build:esm": "tsc -p tsconfig.esm.json",
+        "build:types": "tsc -p tsconfig.types.json",
         "test": "jest",
         "lint": "eslint src/**/*.ts",
         "lint:fix": "eslint src/**/*.ts --fix",
