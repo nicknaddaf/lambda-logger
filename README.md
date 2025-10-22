@@ -34,7 +34,7 @@ MIT License - See LICENSE file for details.
 ## Support
 
 -   🐛 Issues: https://github.com/nicknaddaf/lambda-logger/issues
--   📚 Documentation: https://github.com/nicknaddaf/lambda-logger/docs
+-   📚 Documentation: https://github.com/nicknaddaf/lambda-logger/tree/main/docs
 
 ---
 
@@ -53,3 +53,7 @@ MIT License - See LICENSE file for details.
 
 -   Fix package configuration issue with JavaScript code
 -   Add documentation section
+
+### v0.2.1
+
+-   Fix documentation link in readme.md
