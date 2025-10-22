@@ -65,7 +65,7 @@ https://github.com/nicknaddaf/lambda-logger-demo
 
 -   Fix documentation link in readme.md
 
-### v0.3.0
+### v0.3.1
 
 -   Support multi-configuration for TypeScript
 -   Add demo link to Readme file.
