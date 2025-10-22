@@ -30,7 +30,7 @@ export { S3Destination, S3DestinationConfig } from './destinations/S3Destination
 export { FileDestination, FileDestinationConfig } from './destinations/FileDestination';
 
 // Helper function to create a pre-configured logger for Lambda
-export async function createLambdaLogger(config?: Partial<LoggerConfig>) {
+export function createLambdaLogger(config?: Partial<LoggerConfig>): Logger {
     const logger = new Logger({
         service: config?.service || process.env.AWS_LAMBDA_FUNCTION_NAME || 'lambda-function',
         environment: config?.environment || process.env.ENVIRONMENT || 'production',
