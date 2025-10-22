@@ -38,6 +38,13 @@ MIT License - See LICENSE file for details.
 
 ---
 
+## Demo
+
+Here is simple demo that shows how to use this package:
+https://github.com/nicknaddaf/lambda-logger-demo
+
+---
+
 ## Changelog
 
 ### v0.1.0
@@ -57,3 +64,8 @@ MIT License - See LICENSE file for details.
 ### v0.2.1
 
 -   Fix documentation link in readme.md
+
+### v0.3.0
+
+-   Support multi-configuration for TypeScript
+-   Add demo link to Readme file.
