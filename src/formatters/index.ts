@@ -30,10 +30,10 @@ export const prettyFormatter: LogFormatter = (entry: LogEntry): string => {
 export const csvFormatter: LogFormatter = (entry: LogEntry): string => {
     const { timestamp, levelName, message, service, context, error } = entry;
 
-    const escapeCSV = (value: any): string => {
+    const escapeCSV = (value: unknown): string => {
         const str = String(value || '');
         if (str.includes(',') || str.includes('"') || str.includes('\n')) {
-            return `"${str.replaceAll('"', '""')}"`;
+            return `"${str.replace(/"/g, '""')}"`;
         }
         return str;
     };

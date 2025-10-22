@@ -1,9 +1,21 @@
 {
     "name": "@nicknaddaf/lambda-logger",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "A comprehensive, highly configurable TypeScript logging library designed specifically for AWS serverless applications",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
     "scripts": {
         "build": "tsc",
         "test": "jest",
