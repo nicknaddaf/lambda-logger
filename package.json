@@ -1,6 +1,6 @@
 {
     "name": "@nicknaddaf/lambda-logger",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "A comprehensive, highly configurable TypeScript logging library designed specifically for AWS serverless applications",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
