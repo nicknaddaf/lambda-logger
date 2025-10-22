@@ -39,7 +39,6 @@
     ],
     "author": "nicknaddaf",
     "license": "MIT",
-    "type": "module",
     "bugs": {
         "url": "https://github.com/nicknaddaf/lambda-logger/issues"
     },

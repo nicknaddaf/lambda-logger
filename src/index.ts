@@ -1,4 +1,8 @@
 import { LoggerConfig } from './types';
+import { Logger } from './core/Logger';
+import { awsLambdaEnricher, tracingEnricher } from './enrichers';
+import { ConsoleDestination } from './destinations/ConsoleDestination';
+import { jsonFormatter } from './formatters';
 
 export { Logger } from './core/Logger';
 
@@ -26,12 +30,7 @@ export { S3Destination, S3DestinationConfig } from './destinations/S3Destination
 export { FileDestination, FileDestinationConfig } from './destinations/FileDestination';
 
 // Helper function to create a pre-configured logger for Lambda
-export function createLambdaLogger(config?: Partial<LoggerConfig>) {
-    const { Logger } = require('./core/Logger');
-    const { awsLambdaEnricher, tracingEnricher } = require('./enrichers');
-    const { ConsoleDestination } = require('./destinations/ConsoleDestination');
-    const { jsonFormatter } = require('./formatters');
-
+export async function createLambdaLogger(config?: Partial<LoggerConfig>) {
     const logger = new Logger({
         service: config?.service || process.env.AWS_LAMBDA_FUNCTION_NAME || 'lambda-function',
         environment: config?.environment || process.env.ENVIRONMENT || 'production',
